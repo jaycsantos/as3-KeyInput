@@ -5,24 +5,24 @@ AS3 input handler with optional action names
 
 ### Usage
 
-initialize (where this is likely your Main displayobject
+initialize (`this` is likely your Main displayobject)
 ```actionscript
 var input:KeyInput = new KeyInput( this );
 ```
 
-inside your loop
+test for key inputs
 ```actionscript
 input.isDown( KeyCode.LEFT );
 input.isDown( KeyCode.RIGHT );
 ```
 
-optionally define action names for one or more keys
+optionally, you can define action names to represent one or more keys
 ```actionscript
 input.define( "moveLeft", KeyCode.LEFT, KeyCode.A );
-input.define( "shoot", KeyCode.LMB, KeyCode.SPACE );
+input.define( "shoot", KeyCode.LMB );
 ```
 
-this now to check if either LEFT or A keys were pressed
+test if either LEFT or A key were pressed
 ```actionscript
 input.isPressed( "moveLeft" );
 ```
